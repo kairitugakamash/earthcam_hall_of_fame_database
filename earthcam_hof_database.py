@@ -14,7 +14,7 @@ from time import sleep
 
 cams=['Algonquin', 'Amsterdam', 'Bermuda', 'Capetown', 'Corsica', 'Edmonton', 'Gibraltar','Mauritius', 'Mountkilimanjaro' ,'Saipan', 'Thailand']
 city = input(f"Select one Earthcam from the list given :\n {cams}\n\n")
-
+path = "path to data"
 # Enter Earhcam name -- case insensitive
 
 if city.lower() not in [x.lower() for x in cams]:
@@ -24,11 +24,11 @@ else:
     #print(city_name)
     
     #date_accessed = now
-    main_path = f"C:/Users/jane.waweru/python/Web Scraping/earthcam/{city}/"
-    #main_path = f"C:/Users/jane.waweru/python/Web Scraping/earthcam/{city}-{now}/"
-    photos_path = f"C:/Users/jane.waweru/python/Web Scraping/earthcam/{city}/{city}_photos/"
-    metadata_path = f"C:/Users/jane.waweru/python/Web Scraping/earthcam/{city}/{city}_metadata/"
-    bad_images = f"C:/Users/jane.waweru/python/Web Scraping/earthcam/{city}/incomplete_image/"
+    main_path = f"{path}/{city}/"
+    #main_path = f"{path}/{city}-{now}/"
+    photos_path = f"{path}/{city}/{city}_photos/"
+    metadata_path = f"{path}/{city}/{city}_metadata/"
+    bad_images = f"{path}/{city}/incomplete_image/"
 
     # Check whether the specified path exists or not
     isExist = os.path.exists(main_path)
